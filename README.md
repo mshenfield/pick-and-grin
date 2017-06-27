@@ -27,6 +27,14 @@ In our challenges we will all use the warehouse and product data contined in `./
 For each customer order we will print a picking ticket for a warehouse worker 
 to follow. It will list in optimal order the bin numbers  
 
+## Difficulties
+
+600 - warehouse
+1800 - multiple warehouses
+60 - room to room
+
+
+
 ## Challenge #1
 Given the warehouse data found in `./data` print
 
