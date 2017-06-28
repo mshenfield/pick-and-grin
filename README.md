@@ -32,8 +32,8 @@ to follow. It will list in optimal order the bin numbers
 600 - warehouse
 1800 - multiple warehouses
 60 - room to room
-300 - 3 level
-600 - 4 level
+300 - shelf 3 (tow motor)
+600 - shelf 4 (tow motor and closes bay with cones)
 30 - each small bin
 120 - each large bin
 ```
