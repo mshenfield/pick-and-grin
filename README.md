@@ -51,6 +51,16 @@ P20742, 5
 ```
 The picking ticket will list the bin, the product, the quantity to pick, product quantity remaing for the bin. At the footer show cummulative picking time.
 
+## Challenge #2
+
+Given the warehouse data found in `./data` print a picking ticket for order 1000 which has these product quantites
+
+```
+P20000, 19
+```
+
+The picking ticket will list the bin, the product, the quantity to pick, product quantity remaing for the bin. At the footer show cummulative picking time.
+
 
 ## Write your own
 Contribute your solution by adding a folder name {your twitter handle}+{your language} such as "bryan_hunter+elixir".
