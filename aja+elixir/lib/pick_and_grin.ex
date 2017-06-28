@@ -1,18 +1,11 @@
 defmodule PickAndGrin do
-  @moduledoc """
-  Documentation for PickAndGrin.
-  """
+  @product_bins_filename "../data/product-bins.tsv"
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> PickAndGrin.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def load_data do
+    @product_bins_filename
+    |> File.stream!
+    |> CSV.decode(separator: ?\t)
+    |> Enum.to_list
+    |> IO.inspect
   end
 end
