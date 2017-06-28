@@ -1,34 +1,33 @@
 # pick-and-grin
-A NashFP playground for you to contribute your polyglot FP solutions to 
+A NashFP playground for you to contribute your polyglot FP solutions to
 warehouse "order picking" and "product putaway".
 
 ## The setup
 
 The facts:
-* We are a product distributor 
 * We carry thousands of different products each with it own product-id
-* All products weigh the same and are the same size.
-* In the warehouses we store the products in named product bins.
-* There are small bin that can hold up to 50 items, and large bins that can hold up to 1,000 items.
-* Products in a small bin should all be the same (same product-id)
-* Products in a large bins can contain multiple products (multiple product-ids)
-* We have a two warehouses (W1 and W2). 
-* In the warehouse there are multiple rooms (R1, R2, ...)
-* In each room there are multiple bays (B01, B02, ...) 
-* The bays have one or more shelves (S1, S2, ...)
-* Bins are positioned sequentially left-tp-right on shelves.
-* A shelf may contain 50 small bins (01 - 50) or 5 large bins (A-E).
-* A given shelf will contain either all small bins or all large bins)
-* Bin ids are based on their location. For example W1-R1-B4-S1-9 would be in warehouse 1, room 1, bay 04, shelf 1, and position 9. The trailing "9" (a number, not a letter) tells us it's a small bin.
-* A given product can exist in multiple small bins and in multiple large bins. 
+* small bins - 50 items
+* small bins - homogenous
+* small bins - 25 per shelf
+* small bin type - labeled with a "S"
+* large bins - 1,000 items.
+* large bins - heterogenous
+* large bins - 5 per shelf
+* large bin type - labeled with an "L"
+* We have a two warehouses (W1 and W2).
+* Wx-Rx-Bx-Sx
+* bins are left to right on each shelf
+* each shelf contains one type of bin
 * Most (but not all) products are in stock.
 
 In our challenges we will all use the warehouse and product data contined in `./data`.
-For each customer order we will print a picking ticket for a warehouse worker 
-to follow. It will list in optimal order the bin numbers  
+For each customer order we will print a picking ticket for a warehouse worker
+to follow. It will list in optimal order the bin numbers
 
 ## Difficulties
- ```
+seconds
+
+```
 600 - base cost for picking
 1800 - multiple warehouses
 60 - move from a room to another room
@@ -39,7 +38,7 @@ to follow. It will list in optimal order the bin numbers
 ```
 
 ## Challenge #1
-Given the warehouse data found in `./data` print a picking ticket for order 1000 which has these product quantites
+Given the warehouse data found in `./data` print a picking ticket for this order:
 
 ```
 P20573, 5
@@ -47,6 +46,21 @@ P20741, 25
 P20284, 100
 P20742, 5
 ```
+
+```bash
+W1-R1-B1-S01-1-S	P20573	16 # 600 + 60 + 30 = 690
+
+# W1-R1-B1-S01-13-S	P20284	25
+W1-R3-B4-S02-C-L	P20284	496 # 60 + 120 = 180
+
+# W1-R1-B1-S01-12-S	P20741	19
+
+W2-R1-B4-S02-B-L	P20741	286 # 1800 + 60 + 120 = 1980
+W2-R3-B3-S04-A-L	P20742	383 # 60 + 600 + 120 = 780
+
+# 3,630
+```
+
 The picking ticket will list the bin, the product, the quantity to pick, product quantity remaing for the bin. At the footer show cummulative picking time.
 
 
