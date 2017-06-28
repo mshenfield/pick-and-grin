@@ -38,7 +38,14 @@ to follow. It will list in optimal order the bin numbers
 120 - each large bin
 
 ## Challenge #1
-Given the warehouse data found in `./data` print
+Given the warehouse data found in `./data` print a picking ticket for order 1000 which has these product quantites
+
+P20573, 5
+P20741, 25
+P20284, 100
+P20742, 5
+
+
 
 ## Inputs
 
