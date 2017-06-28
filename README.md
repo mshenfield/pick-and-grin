@@ -25,17 +25,19 @@ The facts:
 
 In our challenges we will all use the warehouse and product data contined in `./data`.
 For each customer order we will print a picking ticket for a warehouse worker 
-to follow. It will list in optimal order the bin numbers  
+to follow. It will list in optimal order the bin numbers, the product-id, and quantity picked. 
 
 ## Difficulties
- ```
-600 - base cost for picking
-1800 - multiple warehouses
-60 - move from a room to another room
-300 - picking from shelf 3 (tow motor)
-600 - picking from shelf 4 (tow motor and closes bay with cones)
-30 - moving to each small bin
-120 - moving to each large bin
+
+| Cost in seconds | Description |
+|----------------|--------------|
+| 600 | base cost for picking |
+| 1800 | multiple warehouses |
+| 60 | move from a room to another room |
+| 300 | picking from shelf 3 (tow motor) |
+| 600 | picking from shelf 4 (tow motor and closes bay with cones) |
+| 30 | moving to each small bin |
+| 120 | moving to each large bin |
 ```
 
 ## Challenge #1

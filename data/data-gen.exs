@@ -27,8 +27,6 @@ defmodule DataGen do
         for p <- positions, do: "W#{w}-R#{r}-B#{b}-S#{ String.pad_leading("#{s}", 2, "0")}-#{p}-L\n"
     end
 
-    
-
     def make_product_bins() do
         products = File.read!("products.tsv") |> String.split("\n")
         bins = File.read!("bins.tsv") |> String.split("\n")
@@ -61,11 +59,9 @@ defmodule DataGen do
             |> Enum.join("\n")
 
         File.write("product-bins.tsv", pb)
-        
     end
-
 end
 
-DataGen.make_bins()
-DataGen.make_products()
-DataGen.make_product_bins()
+# DataGen.make_bins()
+# DataGen.make_products()
+# DataGen.make_product_bins()
