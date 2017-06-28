@@ -28,7 +28,7 @@ For each customer order we will print a picking ticket for a warehouse worker
 to follow. It will list in optimal order the bin numbers  
 
 ## Difficulties
-
+ ```
 600 - warehouse
 1800 - multiple warehouses
 60 - room to room
@@ -36,6 +36,7 @@ to follow. It will list in optimal order the bin numbers
 600 - 4 level
 30 - each small bin
 120 - each large bin
+```
 
 ## Challenge #1
 Given the warehouse data found in `./data` print a picking ticket for order 1000 which has these product quantites
