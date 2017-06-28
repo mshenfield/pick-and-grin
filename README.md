@@ -46,7 +46,7 @@ P20741, 25
 P20284, 100
 P20742, 5
 ```
-
+The picking ticket will list the bin, the product, the quantity to pick, and the post-picking on-hand for the bin.
 
 
 
