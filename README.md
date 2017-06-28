@@ -29,13 +29,13 @@ to follow. It will list in optimal order the bin numbers
 
 ## Difficulties
  ```
-600 - warehouse
+600 - base cost for picking
 1800 - multiple warehouses
-60 - room to room
-300 - shelf 3 (tow motor)
-600 - shelf 4 (tow motor and closes bay with cones)
-30 - each small bin
-120 - each large bin
+60 - move from a room to another room
+300 - picking from shelf 3 (tow motor)
+600 - picking from shelf 4 (tow motor and closes bay with cones)
+30 - moving to each small bin
+120 - moving to each large bin
 ```
 
 ## Challenge #1
@@ -47,11 +47,8 @@ P20741, 25
 P20284, 100
 P20742, 5
 ```
-The picking ticket will list the bin, the product, the quantity to pick, and the post-picking on-hand for the bin.
+The picking ticket will list the bin, the product, the quantity to pick, product quantity remaing for the bin. At the footer show cummulative picking time.
 
-
-
-## Inputs
 
 ## Write your own
 Contribute your solution by adding a folder name {your twitter handle}+{your language} such as "bryan_hunter+elixir".
