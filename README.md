@@ -25,17 +25,20 @@ The facts:
 
 In our challenges we will all use the warehouse and product data contined in `./data`.
 For each customer order we will print a picking ticket for a warehouse worker 
-to follow. It will list in optimal order the bin numbers  
+to follow. It will list in optimal order the bin numbers, the product-id, and quantity picked. 
 
 ## Difficulties
 
-600 - warehouse
-1800 - multiple warehouses
-60 - room to room
-300 - 3 level
-600 - 4 level
-30 - each small bin
-120 - each large bin
+| Cost in seconds | Description |
+|----------------|--------------|
+| 600 | base cost for picking |
+| 1800 | multiple warehouses |
+| 60 | move from a room to another room |
+| 300 | picking from shelf 3 (tow motor) |
+| 600 | picking from shelf 4 (tow motor and closes bay with cones) |
+| 30 | moving to each small bin |
+| 120 | moving to each large bin |
+```
 
 ## Challenge #1
 Given the warehouse data found in `./data` print a picking ticket for order 1000 which has these product quantites
@@ -46,11 +49,8 @@ P20741, 25
 P20284, 100
 P20742, 5
 ```
-The picking ticket will list the bin, the product, the quantity to pick, and the post-picking on-hand for the bin.
+The picking ticket will list the bin, the product, the quantity to pick, product quantity remaing for the bin. At the footer show cummulative picking time.
 
-
-
-## Inputs
 
 ## Write your own
 Contribute your solution by adding a folder name {your twitter handle}+{your language} such as "bryan_hunter+elixir".
