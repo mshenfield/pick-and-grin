@@ -38,7 +38,7 @@ to follow. It will list in optimal order the bin numbers, the product-id, and qu
 | 600 | picking from shelf 4 (tow motor and closes bay with cones) |
 | 30 | moving to each small bin |
 | 120 | moving to each large bin |
-```
+
 
 ## Challenge #1
 Given the warehouse data found in `./data` print a picking ticket for order 1000 which has these product quantites
